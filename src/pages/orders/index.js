@@ -44,7 +44,7 @@ function Orders() {
                               layout="fill"
                               objectFit="cover"
                               className="rounded-lg"
-                              alt="pizza"
+                              alt="food"
                             />
                           </div>
                           <div className="font-bold text-xl">{data.name}</div>
