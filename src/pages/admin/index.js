@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Custom404 from "../404";
 
 const sidesPriceOption = { single: "", double: "" };
-const pizzaPriceOption = { regular: "", medium: "", large: "" };
+const foodPriceOption = { regular: "", medium: "", large: "" };
 function Admin() {
   const [mounted, setMounted] = useState(false);
   const [foodData, setFoodData] = useState({
@@ -18,9 +18,9 @@ function Admin() {
       return { ...prevData, [e.target.name]: e.target.value };
     });
     if (e.target.name === "foodCategory") {
-      if (e.target.value === "Pizza") {
+      if (e.target.value === "Food") {
         setFoodData((prevData) => {
-          return { ...prevData, price: pizzaPriceOption };
+          return { ...prevData, price: foodPriceOption };
         });
       } else if (e.target.value === "SIDES & BEVERAGES") {
         setFoodData((prevData) => {
@@ -106,7 +106,7 @@ function Admin() {
                   value={foodData.foodCategory}
                 >
                   <option value="">Select Food Category</option>
-                  <option value="Pizza">PIZZA</option>
+                  <option value="Food">FOOD</option>
                   <option value="SIDES & BEVERAGES">SIDES & BEVERAGES</option>
                 </select>
               </div>
