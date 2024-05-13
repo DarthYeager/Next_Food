@@ -18,11 +18,15 @@ function Admin() {
       return { ...prevData, [e.target.name]: e.target.value };
     });
     if (e.target.name === "foodCategory") {
-      if (e.target.value === "Food") {
+      if (e.target.value === "PIZZA") {
         setFoodData((prevData) => {
           return { ...prevData, price: foodPriceOption };
         });
       } else if (e.target.value === "SIDES & BEVERAGES") {
+        setFoodData((prevData) => {
+          return { ...prevData, price: sidesPriceOption };
+        });
+      } else if (e.target.value === "BIRYANI/RICE") {
         setFoodData((prevData) => {
           return { ...prevData, price: sidesPriceOption };
         });
@@ -108,6 +112,7 @@ function Admin() {
                   <option value="">Select Food Category</option>
                   <option value="Food">FOOD</option>
                   <option value="SIDES & BEVERAGES">SIDES & BEVERAGES</option>
+                  <option value="Food">BIRYANI/RICE</option>
                 </select>
               </div>
               <div className="mb-4">
