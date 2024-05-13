@@ -18,7 +18,7 @@ function Admin() {
       return { ...prevData, [e.target.name]: e.target.value };
     });
     if (e.target.name === "foodCategory") {
-      if (e.target.value === "PIZZA") {
+      if (e.target.value === "Pizza") {
         setFoodData((prevData) => {
           return { ...prevData, price: foodPriceOption };
         });
