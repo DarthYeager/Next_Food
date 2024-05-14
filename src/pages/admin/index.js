@@ -60,7 +60,7 @@ function Admin() {
 
   return (
     <>
-      {setMounted ? (
+      {mounted ? (
         <div
           style={{
             minHeight: "90vh",
