@@ -52,7 +52,7 @@ function Card(props) {
       <div className="w-80 rounded-lg bg-white overflow-hidden dark:bg-black border-gradient">
         <Link href={{ pathname: "/Item/[item]" }} as={`Item/${data["_id"]}`}>
           <div className="relative w-full h-80">
-            <Image src={data.img} layout="fill" objectFit="cover" alt="pizza" />
+            <Image src={data.img} layout="fill" objectFit="cover" alt="meal" />
           </div>
           <div className="p-4">
             <div lassName="font-bold mb-2 text-xl uppercase"> {data.name}</div>

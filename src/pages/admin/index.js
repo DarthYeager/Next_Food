@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Custom404 from "../404";
 
 const sidesPriceOption = { single: "", double: "" };
-const foodPriceOption = { regular: "", medium: "", large: "" };
+const pizzaPriceOption = { regular: "", medium: "", large: "" };
+const ricePriceOption = { half: "", full: ""};
 function Admin() {
   const [mounted, setMounted] = useState(false);
   const [foodData, setFoodData] = useState({
@@ -20,7 +21,7 @@ function Admin() {
     if (e.target.name === "foodCategory") {
       if (e.target.value === "Pizza") {
         setFoodData((prevData) => {
-          return { ...prevData, price: foodPriceOption };
+          return { ...prevData, price: pizzaPriceOption };
         });
       } else if (e.target.value === "SIDES & BEVERAGES") {
         setFoodData((prevData) => {
@@ -28,7 +29,7 @@ function Admin() {
         });
       } else if (e.target.value === "BIRYANI/RICE") {
         setFoodData((prevData) => {
-          return { ...prevData, price: sidesPriceOption };
+          return { ...prevData, price: ricePriceOption };
         });
       } else {
         setFoodData((prevData) => {
@@ -110,7 +111,7 @@ function Admin() {
                   value={foodData.foodCategory}
                 >
                   <option value="">Select Food Category</option>
-                  <option value="Pizza">Pizza</option>
+                  <option value="Pizza">PIZZA</option>
                   <option value="SIDES & BEVERAGES">SIDES & BEVERAGES</option>
                   <option value="BIRYANI/RICE">BIRYANI/RICE</option>
                 </select>
