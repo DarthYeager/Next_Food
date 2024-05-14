@@ -110,9 +110,9 @@ function Admin() {
                   value={foodData.foodCategory}
                 >
                   <option value="">Select Food Category</option>
-                  <option value="Food">FOOD</option>
+                  <option value="Pizza">Pizza</option>
                   <option value="SIDES & BEVERAGES">SIDES & BEVERAGES</option>
-                  <option value="Food">BIRYANI/RICE</option>
+                  <option value="BIRYANI/RICE">BIRYANI/RICE</option>
                 </select>
               </div>
               <div className="mb-4">
